@@ -1,16 +1,16 @@
-<h1 align="center">html-to-jsx-transform</h1>
+<h1 align="center">@ykg/html-to-jsx-transform</h1>
 <p align="center">
     <strong>A library for converting an HTML string into a JSX string using ASTs.</strong>
 </p>
 <p align="center">
-    <a href="https://github.com/leodr/html-to-jsx-transform/blob/main/LICENSE">
-        <img alt="MIT License" src="https://img.shields.io/github/license/leodr/html-to-jsx-transform?color=%23A855F7&labelColor=%2327272A&style=for-the-badge">
+    <a href="https://github.com/ykg/html-to-jsx-transform/blob/main/LICENSE">
+        <img alt="MIT License" src="https://img.shields.io/github/license/ykg/html-to-jsx-transform?color=%23A855F7&labelColor=%2327272A&style=for-the-badge">
     </a>
-    <a href="https://www.npmjs.com/package/html-to-jsx-transform">
-        <img alt="David" src="https://img.shields.io/npm/v/html-to-jsx-transform?color=%236366F1&labelColor=%2327272A&style=for-the-badge">
+    <a href="https://www.npmjs.com/package/@ykg/html-to-jsx-transform">
+        <img alt="David" src="https://img.shields.io/npm/v/@ykg/html-to-jsx-transform?color=%236366F1&labelColor=%2327272A&style=for-the-badge">
     </a>
-    <a href="https://github.com/leodr/html-to-jsx-transform/issues">
-        <img alt="Open GitHub issues" src="https://img.shields.io/github/issues/leodr/html-to-jsx-transform?color=%2310B981&labelColor=%2327272A&style=for-the-badge">
+    <a href="https://github.com/ykg/html-to-jsx-transform/issues">
+        <img alt="Open GitHub issues" src="https://img.shields.io/github/issues/ykg/html-to-jsx-transform?color=%2310B981&labelColor=%2327272A&style=for-the-badge">
     </a>
 </p>
 <p align="center">
@@ -23,7 +23,7 @@
 
 ---
 
-`html-to-jsx-transform` transforms a string of HTML into JSX. It works by
+`@ykg/html-to-jsx-transform` transforms a string of HTML into JSX. It works by
 turning it into an AST using [`parse5`](https://parse5.js.org/index.html),
 converting every node to its equivalent JSX node to create a Babel AST and then
 stringifying that using
@@ -37,6 +37,7 @@ find a flaw please open an issue so we can add it to the test suite.
 ## ❯ Documentation
 
 - [`htmlToJsx`](#htmlToJsx)
+- [`CLI`](#cli)
 
 <br>
 
@@ -48,7 +49,7 @@ JSX source code.
 #### Example
 
 ```ts
-import { htmlToJsx } from "html-to-jsx-transform";
+import { htmlToJsx } from "@ykg/html-to-jsx-transform";
 
 const jsx = htmlToJsx('<h1 tabindex="0">Hello World!</h1>');
 
@@ -69,6 +70,28 @@ const jsx = htmlToJsx('<h1 tabindex="0">Hello World!</h1>');
 - Attributes are renamed and casing is adjusted (including SVG)
 - Event handlers are converted into arrow functions
 - Boolean and numeric attributes are converted into boolean or number values
+
+<br>
+
+### CLI
+
+Run it without installing:
+
+```sh
+npx @ykg/html-to-jsx-transform "<h1>Hello</h1>"
+```
+
+Read from a file and write to a file:
+
+```sh
+npx @ykg/html-to-jsx-transform --input input.html --output output.jsx
+```
+
+Read from stdin:
+
+```sh
+cat input.html | npx @ykg/html-to-jsx-transform --stdin
+```
 
 <br>
 
@@ -98,7 +121,7 @@ create an issue or pull request!
 
 <p align="center">
     <sub>
-        Project by Leo Driesch, released under <a href="https://github.com/leodr/html-to-jsx-transform/blob/main/LICENSE">MIT license</a>.
+        Project by Leo Driesch, released under <a href="https://github.com/ykg/html-to-jsx-transform/blob/main/LICENSE">MIT license</a>.
     </sub>
 </p>
 <p align="center">

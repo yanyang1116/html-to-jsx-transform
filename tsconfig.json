@@ -21,6 +21,7 @@
     "noUnusedParameters": true,
     "declaration": true,
     "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true
+    "rewriteRelativeImportExtensions": true,
+    "preserveShebang": true
   }
 }
